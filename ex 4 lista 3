@@ -1,0 +1,20 @@
+//Sendo H = 1/1+1/2+1/3+ ... +1/N. Prepare um algoritmo para calcular H sendo N fornecido
+//pelo usuario.
+#include <stdio.h>
+
+int main(){
+
+    int n, contador;
+	float r;
+	
+	printf("Formula: H = 1/1 + 1/2 + 1/3 + ... + 1/N.\n");
+	printf("Qual o valor de N: ");
+	scanf("%d", &n);
+		
+	for(contador = 1; contador <= n; contador++){
+		r += 1.0/contador;
+	}
+	printf("O valor de H e: %.1f \n", r);
+	
+	return 0;
+}
