@@ -1,0 +1,24 @@
+//Faça um algoritmo que apresenta a menor altura entre 10 pessoas, usando apenas a repetição
+//enquanto.
+
+#include <stdio.h>
+
+int main(){
+	
+	float AlturaA, AlturaM;
+	int MesmaAltura, contador = 1;
+
+	while(contador <= 10){
+		printf("Qual a altura da %d pessoa: ", contador);
+	        scanf("%f", &AlturaA);		
+		if(AlturaA == AlturaM) {
+			MesmaAltura++;
+		}else if((AlturaA < AlturaM) || (AlturaM == 0)){
+			AlturaM = AlturaA;
+		}	
+	contador++;
+}
+	printf("%d pessoas possuem a MENOR altura de %.2fm", MesmaAltura, AlturaM);
+	
+	return 0;
+}
