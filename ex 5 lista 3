@@ -1,0 +1,26 @@
+//Elabore um algoritmo para calcular N! (fatorial de N) sendo que o valor inteiro de N é
+//fornecido pelo usuário. Sabe-se que: N! = 1x2x...x N-1 x N e 0! = 1. Use o enquanto...faça.
+
+#include<stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+	int numero, fatorialDeN, fatorial;
+	
+	printf ("Insira o valor do fatorial:");
+	scanf("%d", &fatorial);
+	printf("Digite o numero para se calcular: ");
+	scanf("%d", &numero);
+	
+	int contador = 0;
+	fatorialDeN = 1;
+	while(contador < numero){
+		fatorialDeN = fatorialDeN * (numero - contador);
+		contador++;
+	}
+	
+	printf("O fatorial do numero e %d\n", fatorialDeN);
+	
+	return 0;	
+}
