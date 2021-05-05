@@ -1,0 +1,22 @@
+//Construa um algoritmo que calcule o fatorial de um número usando a estrutura PARA...FAÇA,
+//baseando-se na definição matemática (N! = 1x2x3x...x N-1 x N e 0! = 1 por definição)
+
+#include <stdio.h>
+
+int main(){
+	
+	int numFl, cont, rFatorial = 1;
+	
+	printf("Informe o numero para se calcular o fatorial: ");
+	scanf("%d", &numFl);
+	
+	if(numFl > 0){
+		for(cont = numFl; cont > 0; cont--){
+			rFatorial *= cont;
+		}
+	}
+	
+	printf("O fatorial %d! de %d", numFl, rFatorial);
+	
+  return 0;
+}
