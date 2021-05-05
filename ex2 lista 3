@@ -1,0 +1,36 @@
+//Faça um algoritmo que leia dois números calcule o resultado da multiplicação de um pelo
+//outro sem utilizar a operação de multiplicação (ou seja, utilizando apenas soma)
+#include <stdio.h>
+
+int main(){
+	
+	int n1, n2, cont, r = 0;
+	bool temSinal;
+	
+	printf("Quais sao os 2 numeros que deseja multiplicar? \n");
+	scanf("%d%d", &n1, &n2);
+	if(n1 < 0) {
+		n1 *= -1;
+		temSinal = true;
+}	
+	if(n2 < 0) {
+		n2 *= -1;		
+	if(temSinal)temSinal = false;	
+}
+	if(n1 >= n2){
+		for(cont = 0; cont < n2; cont++){
+			r += n1;
+		}		
+}else{
+		for(cont = 0; cont < n1; cont++){
+		r += n2;
+	}
+ }
+	
+	if(temSinal){
+		r *= -1;
+ }	
+	printf("A multiplicação entre %d e %d e %d", n1, n2, r);
+
+	return 0;
+}
