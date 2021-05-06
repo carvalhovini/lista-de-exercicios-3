@@ -1,0 +1,43 @@
+//Faça um algoritmo que receba o sexo e a nota dos alunos de uma classe e apresente a média
+//das notas dos alunos e a média das notas das alunas. O algoritmo deverá apresentar os
+//resultados solicitados quando for fornecida uma nota negativa.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main (){
+int homens=0, mulheres=0;
+float mediaH, mediaM, nota;
+char sexo;
+
+	while (nota >=0){
+		
+		 
+			while (sexo != 'F' && sexo != 'M'){
+				printf ("\nDigite o F para o sexo feminino e M para masculino ");
+		     	scanf ("%c", &sexo);
+		     	fflush(stdin);
+			}
+			
+			printf ("Qual foi a nota tirada ");
+			scanf ("%f", &nota);
+			sexo = toupper(sexo);
+			fflush(stdin);
+			
+			if (nota >= 0){
+				if (sexo == 'F'){
+					mulheres++;
+					mediaM += nota;	
+				}else{
+					(nota >=0);
+					homens++;
+					mediaH += nota;
+				}
+		}
+	sexo = 'V';
+}
+	printf("\nA media de nota dos %d homens: %.2f", homens, mediaH);
+	printf("\nA media de nota das %d mulheres: %.2f", mulheres, mediaM);
+
+return (0);
+}
