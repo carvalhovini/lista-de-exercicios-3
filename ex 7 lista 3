@@ -1,0 +1,50 @@
+//Elabore um algoritmo que apresenta as compras de frutas efetuadas por usuário (quantidade
+//de frutas para cada tipo), sendo elas identificadas por meio de um número.
+//1 => ABACAXI
+//2 => MAÇA
+//3 => PERA
+
+#include <stdio.h> 
+#include <locale.h> 
+int main (){
+     nt Maca, Pera, Abacaxi, frutas, quantidade;
+setlocale(LC_ALL, "Portuguese");
+
+	while (frutas !=4){
+	printf("\n Bem-vindo a Feira dos Produtores");
+	printf("\n Digite [1] para escolher a Pera, \n Digite [2] para escolher o Abacaxi, \n Digite [3] para escolher a Maça, \n Digite [4] para finalizar seu pedido");
+	printf ("\n Qual a sua escolha de fruta para colocar no seu carrinho:");
+	scanf ("%d", &frutas);
+
+		switch(frutas){
+        case 1: 
+        printf ("\n Qual a quantidade de Pera que o senhor deseja");
+        scanf ("%d", &quantidade);
+        Pera += quantidade;
+        break;
+        
+		case 2: 
+		printf ("\n Qual a quantidade de Abacaxi que o senhor deseja");
+        scanf ("%d", &quantidade);
+        Abacaxi += quantidade;
+        break; 
+        
+       case 3: 
+		printf ("\n Qual a quantidade de Maça que o senhor deseja");
+        scanf ("%d", &quantidade);
+        Maca += quantidade;
+        break;  
+        
+        case 4: 
+		printf ("\n No seu carrinho ficou com um quantidade de frutas: Maça: %d, Pera: %d, Abacaxi: %d ", Maca, Pera, Abacaxi);
+        break; 
+        
+        default:
+		printf("\n Não temos está opção de fruta cadastrada, por favor coloque uma que se encontra disponível!\n");
+
+		}
+
+	}
+
+return (0);
+}
