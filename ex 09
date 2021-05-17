@@ -1,0 +1,72 @@
+#include <stdio.h> //é um cabeçalho da biblioteca padrão do C
+#include <string.h> //biblioteca para strlen e strcmp
+#include <stdlib.h> // biblioteca de formataçao
+#include <locale.h> // biblioteca de acentos
+#include <math.h> // biblioteca para operações matematicas 
+#include <conio.h> // biblioteca para para fornecer entrada / saída
+#include <time.h> //A função main pode retornar um inteiro para o sistema operacional
+
+int main(void){
+   setlocale(LC_ALL, "Portuguese");
+	int homen, mulher, azuis, verdes, castanhos, pretos, loiros, cabelo_castanhos, cabelos_pretos;
+	int anos, habitantes, habitantesM, habitantesF;
+	int idade1, idade2, idade3, idade4;
+	
+	printf("Bom dia, primeiramente qual e a pupolação total da cidade? \n");
+	scanf("%d", &habitantes);
+	
+	printf("Okay, desses %d habitantes quantos eram homens?\n", habitantes);
+	scanf("%d", &habitantesM);
+	
+	habitantesF = habitantes - habitantesM;
+	
+	printf("Logo se tem %d homens apenas %d são mulheres.\n", habitantesM, habitantesF);
+	
+system("pause");
+system("cls");
+    
+	printf("okay, agora preciso de alguns dados sobre os habitantes:\n");
+	printf("Desses %d homens e mulheres quantos tinham olhos azuis?\n", habitantes);
+	scanf("%d", &azuis);
+	
+	printf("Desses %d homens e mulheres quantos tinham olhos verdes?\n", habitantes);
+	scanf("%d", &verdes);
+	
+	printf("Desses %d homens e mulheres quantos tinham olhos castanhos?\n", habitantes);
+	scanf("%d", &castanhos);
+	
+	printf("Desses %d homens e mulheres quantos tinham olhos pretos?\n", habitantes);
+	scanf("%d", &pretos);
+	
+	printf("\tHABITANTES - %d\n", habitantes);
+	printf("\tHomens e mulheres com olhos azuis - %d\n", azuis);
+	printf("\tHomens e mulheres com olhos verdes - %d\n", verdes);
+	printf("\tHomens e mulheres com olhos castanhos - %d\n", castanhos);
+	printf("\tHomens e mulheres com olhos pretos - %d\n", pretos);
+	
+    printf("okay, agora preciso de alguns outros dados sobre os habitantes:\n");
+    printf("Desses %d homens e mulheres quantos tinham cabelos loiros?\n", habitantes);
+    scanf("%d", &loiros);
+    printf("Desses %d homens e mulheres quantos tinham cabelos castanhos?\n", habitantes);
+    scanf("%d", &cabelo_castanhos);
+    printf("Desses %d homens e mulheres quantos tinham cabelos pretos?\n", habitantes);
+    scanf("%d", &cabelos_pretos);
+    
+    printf("Para finalizar preciso saber das idades dos habitantes\n");
+    printf("quantos tinham entre 0 e 15 anos?\n");
+    scanf("%d", idade1);
+    printf("quantos tinham entre 16 e 30 anos?\n");
+    scanf("%d", idade2);
+	printf("quantos tinham entre 31 e 50 anos?\n");
+	scanf("%d", idade3);
+	printf("quantos tinham entre 51 e 80 anos?\n");
+	scanf("%d", idade4);
+	
+	printf("\tHABITANTES - %d", habitantes);
+	printf("\tHomens e mulheres  - entre 0 e 15 anos%d\n", idade1);
+    printf("\tHomens e mulheres  - entre 16 e 30 anos%d\n", idade2); 
+	printf("\tHomens e mulheres  - entre 31 e 50 anos%d\n", idade3);
+	printf("\tHomens e mulheres  - entre 51 e 80 anos%d\n", idade1); 
+	
+	return(0);
+}
