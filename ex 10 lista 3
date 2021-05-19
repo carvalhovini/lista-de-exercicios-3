@@ -1,0 +1,25 @@
+//10. Fazer um algoritmo que leia números inteiros até que a quantidade lida seja 100 ou até que
+//seja lido um número negativo e mostrar a quantidade total de números lidos
+
+#include<stdio.h>
+#include<locale.h>
+#include <stdlib.h>
+
+int main(){
+	int quantDeN = 0; 
+	int numeroD;
+
+	for(int i = 0; i < 100; i++){ 
+		printf("Digite um número: "); 
+		scanf("%i", &numeroD);
+		quantDeN++;
+	if(numeroD < 0){ 
+	break;
+}}
+	if(quantDeN == 1){
+	printf("Foi recebido apenas 1 número.\n\n");
+	} else{ 
+	printf("Foram recebidos %i numeros\n\n", quantDeN);
+	}	
+	return 0;
+}
